@@ -27,4 +27,4 @@ where minimum_quantity >0; -- Answer to question 4
 select it.name, it.date_created, it.date_changed, TIMESTAMPDIFF(MINUTE, STR_TO_DATE(it.date_created, '%m/%d/%Y %H:%i'), STR_TO_DATE(it.date_changed, '%m/%d/%Y %H:%i')) AS time_in_minutes, its.item_id, its.quantity
 from inv_item it
 join inv_item_stock its on its.item_id = it.item_id
-where its.quantity = 0;
+where its.quantity = 0; -- Answer to question 5
